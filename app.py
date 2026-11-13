@@ -29,14 +29,10 @@ st.write("Enter a review to classify it as Positive or Negative.")
 
 st.sidebar.header("About")
 st.sidebar.write(
-    "**Dataset:** Large Movie Review Dataset v1.0 (IMDB Dataset)\n\n"
-    "**Reviews:** 50,000 labeled movie reviews (25,000 train / 25,000 test)\n\n"
+    "**Dataset:** IMDB movie reviews; training-data details unknown\n\n"
     "**Model:** TF-IDF + LinearSVC pipeline\n\n"
-    "**Test accuracy:** Not provided"
-)
-st.sidebar.markdown(
-    "[Download the official Stanford dataset]"
-    "(https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz)"
+    "**Test accuracy:** 83.2% | **F1:** 0.83 "
+    "(388-review held-out sample)"
 )
 
 st.subheader("Try an example")

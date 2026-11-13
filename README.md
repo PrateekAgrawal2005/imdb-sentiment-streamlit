@@ -9,16 +9,12 @@ Given a written review, predict whether its sentiment is positive or negative.
 
 ## Dataset
 
-The model was trained on the **Large Movie Review Dataset v1.0**, also known
-as the **IMDB Dataset**, from the Stanford AI Lab.
+The task is binary sentiment classification of movie reviews into positive and
+negative labels. I trained the model myself, but the composition and size of
+the data used to train the saved pipeline are unknown.
 
-- Total labeled reviews: 50,000
-- Training reviews: 25,000
-- Testing reviews: 25,000
-- Labels: `pos` and `neg`
-- Review type: movie reviews
-- Official download:
-  <https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz>
+The evaluation sample was drawn from the IMDB dataset. Its training-data
+details should not be inferred from that evaluation sample.
 
 ## Approach
 
@@ -33,11 +29,22 @@ same preprocessing and learned TF-IDF vocabulary as training.
 
 ## Result
 
-Test accuracy was not provided with the model artifact. Add the measured
-accuracy here when available.
+On a held-out sample of 388 IMDB reviews (191 negative and 197 positive), the
+model achieved:
+
+- Accuracy: **83.2%** (`0.8325`)
+- F1 score: **0.830**
+- Per-class F1: **0.83** for both `neg` and `pos`
+- Majority-class baseline: **50.8%**
 
 The displayed confidence is a bounded, margin-based indicator derived from
 `LinearSVC.decision_function`; it is not a calibrated probability.
+
+## Limitations
+
+- The evaluation uses a relatively small held-out sample of 388 reviews.
+- LinearSVC with TF-IDF is a bag-of-words approach and can miss sarcasm,
+  context, and negation.
 
 ## Run locally
 
@@ -53,7 +60,7 @@ Open the local URL shown by Streamlit, usually
 
 ## Live demo
 
-Live demo link: `https://your-app-name.streamlit.app`
+Live demo: <https://imdb-sentiment-analysis0.streamlit.app/>
 
 ## Streamlit Community Cloud deployment
 
