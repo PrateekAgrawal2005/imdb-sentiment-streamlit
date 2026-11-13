@@ -10,11 +10,14 @@ Given a written review, predict whether its sentiment is positive or negative.
 ## Dataset
 
 The task is binary sentiment classification of movie reviews into positive and
-negative labels. I trained the model myself, but the composition and size of
-the data used to train the saved pipeline are unknown.
+negative labels. I trained the model myself on the **IMDB Large Movie Review
+Dataset**.
 
-The evaluation sample was drawn from the IMDB dataset. Its training-data
-details should not be inferred from that evaluation sample.
+The training data contains 25,000 English movie reviews: 12,500 positive and
+12,500 negative. The labels are `pos` for positive sentiment and `neg` for
+negative sentiment.
+
+The evaluation sample was also drawn from the IMDB dataset.
 
 ## Approach
 

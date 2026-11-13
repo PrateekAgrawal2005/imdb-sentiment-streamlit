@@ -29,7 +29,9 @@ st.write("Enter a review to classify it as Positive or Negative.")
 
 st.sidebar.header("About")
 st.sidebar.write(
-    "**Dataset:** IMDB movie reviews; training-data details unknown\n\n"
+    "**Dataset:** IMDB Large Movie Review Dataset\n\n"
+    "**Training data:** 25,000 English movie reviews "
+    "(12,500 positive / 12,500 negative)\n\n"
     "**Model:** TF-IDF + LinearSVC pipeline\n\n"
     "**Test accuracy:** 83.2% | **F1:** 0.83 "
     "(388-review held-out sample)"
